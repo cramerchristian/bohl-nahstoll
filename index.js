@@ -41,7 +41,7 @@ const productObs = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.3 }
+  { threshold: 0.1 }
 );
 
 const aboutObs = new IntersectionObserver(
