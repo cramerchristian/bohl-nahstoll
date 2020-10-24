@@ -695,6 +695,7 @@ footer {
   .container-sticky--order {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20em;
   }
 
   .container-sticky--order .scroll {
@@ -734,5 +735,9 @@ footer {
   .method_img {
     margin-left: -1em;
     margin-right: 1em;
+  }
+
+  .service:first-of-type {
+    margin: 30em 0 0;
   }
 }
