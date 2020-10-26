@@ -433,15 +433,17 @@ nav-link--logo.active::before {
   opacity: 0.17;
   transition: all ease-in 0.3s;
   cursor: pointer;
+  max-width: 260px;
 }
 
-.grid-item:nth-of-type(4) img,
+.grid-item:nth-of-type(2) img,
 .grid-item:nth-of-type(5) img {
   opacity: 0.15;
 }
 
 .grid-item:nth-of-type(1) img,
-.grid-item:nth-of-type(6) img {
+.grid-item:nth-of-type(7) img,
+.grid-item:nth-of-type(3) img {
   opacity: 0.25;
 }
 
