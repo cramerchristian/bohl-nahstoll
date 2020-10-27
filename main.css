@@ -469,8 +469,22 @@ nav-link--logo.active::before {
   margin: 3em 0;
 }
 
-.method_img {
-  margin-right: 1em;
+#methods p {
+  max-width: 430px;
+  margin-right: auto;
+}
+
+#methods h2 {
+  max-width: 550px;
+}
+
+.method__img_container {
+  min-width: 70px;
+  margin-right: 1.5em;
+}
+
+.method__img_container--first {
+  padding: 0 5px 0 12px;
 }
 
 .service:first-of-type {
@@ -488,10 +502,6 @@ nav-link--logo.active::before {
 }
 
 .extra-right {
-  height: 60px;
-}
-
-.method_img {
   height: 60px;
 }
 
@@ -539,11 +549,6 @@ nav-link--logo.active::before {
 
   .extra-right {
     margin-right: -2.5em;
-  }
-
-  .method_img {
-    margin-left: -1em;
-    margin-right: 1em;
   }
 
   .service:first-of-type {
