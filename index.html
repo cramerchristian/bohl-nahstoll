@@ -78,7 +78,8 @@
         </p>
         </div>
       </section>
-      <section class="container benefits" id="benefits">
+<!--      
+    <section class="container benefits" id="benefits">
         <div class="benefits__title">
           <h4>Ihre Benefits</h4>
           <h2>Diese Vorteile bieten wir Ihrem Team</h2>
@@ -106,6 +107,39 @@
           </div>
         </div>
       </section>
+
+-->
+
+  <section class="container benefits" id="benefits">
+    <div class="benefits__grid">
+      <div class="benefits__title">
+        <h4>Ihre Benefits</h4>
+        <h2>Diese Vorteile bieten wir Ihrem Team</h2>
+      </div>
+      <div class="benefit">
+        <img src="img/utils/efficient.svg" alt="two cogwheels icon">
+        <p>Effiziente Zusammenarbeit</p>
+      </div>
+      <div class="benefit">
+        <img src="img/utils/mistakes.svg" alt="icon shield">
+        <p>Vermeidung entscheidender Fehler</p>
+      </div>
+      <div class="benefit">
+        <img src="img/utils/harmony.svg" alt="two happy persons icon">
+        <p>Höhere Motivation und besseres Arbeitsklima</p>
+      </div>
+      <div class="benefit">
+        <img src="img/utils/capacity.svg" alt="to do list icon">
+        <p>Mehr Kapazitäten für wesentliche Aufgaben</p>
+      </div>
+      <div class="benefit">
+        <img src="img/utils/confident.svg" alt="person climbing mountain icon">
+        <p>Gesteigertes Selbstvertrauen im Umgang mit anspruchsvollen Situationen</p>
+      </div>
+    </div>
+  </section>
+
+
 
       <section class="container container--center" id="refs">
         <h4>Referenzen</h4>
@@ -469,7 +503,7 @@
           </p>
         </div>
           <div class="flex flex--sb">
-            <form id="form" action="">
+            <form id="form">
               <div class="input_container">
                 <label for="name">Name</label>
                 <input id="name" type="text" placeholder="z.B. Max Mustermann"></input>
@@ -499,13 +533,14 @@
                   placeholder="Nachricht"></textarea>
               </div>
               
-              <button type="submit">
-                Senden
+              <button id="send" class="" type="submit">
+                <span>Senden</span>
                 <img class="button_img"src="img/utils/send.svg" alt="send icon" />
+                <img class="buttom_img--success" src="img/utils/check.svg" alt="checkmark"/>
               </button>
             </form>
-            <div  class="form_img">
-              <img src="img/utils/visitenkarte@2x.png" alt="business card of bn-training" />
+            <div class="form_img">
+              <img src="img/utils/visitenkarte@2x.png" alt="business card of bn-training"/>
 
             </div>
           </div> 
@@ -549,5 +584,7 @@
       </div>
     </footer>
     <script src="index.js"></script>
+    <script src="js/form.js"></script>
+    </script>
   </body>
 </html>
