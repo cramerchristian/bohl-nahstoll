@@ -131,7 +131,7 @@ form.addEventListener('submit', (event) => {
           message.style.height = message.scrollHeight + 'px';
         }
 
-        resize;
+        resize();
 
         inputs.forEach((input) => {
           input.childNodes[3].classList.remove('error');
