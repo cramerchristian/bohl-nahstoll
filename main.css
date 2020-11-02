@@ -98,6 +98,20 @@ h4 {
 
 p {
   margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.copy__summary {
+  margin-top: 2em;
+}
+
+.copy__summary .strong {
+  margin-right: 0.3em;
+  color: var(--CLR-primary);
 }
 
 .flex {
@@ -748,6 +762,11 @@ form textarea {
   background: transparent;
 }
 
+form input.error,
+form textarea.error {
+  border-bottom: 1px solid #ad1818;
+}
+
 form textarea {
   width: 100%;
   max-width: 450px;
@@ -766,6 +785,12 @@ form label {
   transform: translateY(2em);
   transition: transform 0.15s ease, font-size 0.15s ease, padding-top 0.15s ease;
   cursor: text;
+}
+
+form label .label__optional {
+  font-size: 0.75em;
+  margin-left: 1em;
+  opacity: 0.6;
 }
 
 form .input_container.active label {
@@ -980,5 +1005,50 @@ footer {
   .footer__logo {
     margin: 0;
     padding: 0;
+  }
+}
+
+/* Impressum / Impressum / Impressum */
+.container--secondary-pages {
+  padding-top: 100px;
+}
+
+.impressum,
+.datenschutz {
+  width: max-content;
+  max-width: 700px;
+  margin: 0 auto 150px;
+}
+
+.impressum h2,
+.datenschutz h2 {
+  margin-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+
+.impressum p,
+.datenschutz p {
+  margin-bottom: 1.5em;
+}
+
+.impressum .small,
+.datenschutz .small {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+hr {
+  margin: 3em 0;
+}
+
+@media (max-width: 600px) {
+  .impressum h2,
+  .datenschutz h2 {
+    font-size: 1.75rem;
+  }
+
+  .impressum h3,
+  .datenschutz h3 {
+    font-size: 1.275rem;
   }
 }
