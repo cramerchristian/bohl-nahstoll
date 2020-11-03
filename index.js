@@ -14,6 +14,7 @@ const setIsMobile = function () {
   if (isMobile) {
     open.classList.add('show');
     nav.classList.remove('show');
+    navLinks.forEach(link => link.addEventListener('click', () => {if(isMobile){closeNav()}}))
   } else {
     nav.classList.add('show');
   }
@@ -36,10 +37,14 @@ open.addEventListener('click', () => {
   close.classList.add('show');
 });
 
-close.addEventListener('click', () => {
+function closeNav(){
   nav.classList.remove('show');
   open.classList.add('show');
   close.classList.remove('show');
+}
+
+close.addEventListener('click', () => {
+  closeNav()
 });
 
 window.addEventListener('resize', () => {
