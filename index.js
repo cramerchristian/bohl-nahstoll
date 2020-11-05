@@ -7,7 +7,7 @@ const nav = document.querySelector('.nav');
 
 let isNavOpen = false;
 let isMobile = false;
-const breakpoint = 771;
+const breakpoint = 786;
 
 const setIsMobile = function () {
   isMobile = window.innerWidth < breakpoint ? true : false;
