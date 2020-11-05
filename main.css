@@ -1115,7 +1115,7 @@ footer {
 
 .impressum,
 .datenschutz {
-  width: max-content;
+  width: auto;
   max-width: 700px;
   margin: 0 auto 150px;
 }
