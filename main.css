@@ -307,13 +307,13 @@ nav-link--logo.active::before {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .hero {
-  margin-bottom: 60px;
-  margin-left: 7vw;
-  max-width: 370px;
+  margin-top: 64px;
+  margin-left: 5vw;
+  max-width: calc(300px);
   color: var(--CLR-primary);
 }
 
@@ -329,16 +329,9 @@ nav-link--logo.active::before {
   color: var(--CLR-dark);
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 800px) {
   .hero {
-    margin-left: 5vw;
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero {
-    margin-bottom: 0px;
+    max-width: 370px;
   }
 }
 
@@ -351,8 +344,14 @@ nav-link--logo.active::before {
   }
 }
 
+@media (min-width: 1400px) {
+  .hero {
+    margin-left: 7vw;
+  }
+}
+
 .intro {
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 .intro {
