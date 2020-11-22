@@ -3,6 +3,8 @@ const open = document.getElementById('open');
 const close = document.getElementById('close');
 const nav = document.querySelector('.nav');
 
+const grid_overlays = Array.from(document.getElementsByClassName('grid-item__overlay'))
+
 // N A V I G A T I O N
 
 let isNavOpen = false;

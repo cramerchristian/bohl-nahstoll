@@ -106,6 +106,12 @@ p {
   font-weight: 700;
 }
 
+hr {
+  color: var(--CLR-main-bg);
+  opacity: 0.3;
+  margin: 2rem 0;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -466,14 +472,19 @@ nav-link--logo.active::before {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.grid-item img {
+.grid-item > img {
   filter: saturate(0);
   opacity: 0.17;
-  transition: all ease-in 0.3s;
   cursor: pointer;
   max-width: 260px;
+  transition: 300ms;
+}
+
+.grid-item:hover > img {
+  opacity: 0 !important;
 }
 
 .grid-item:nth-of-type(2) img,
@@ -487,9 +498,43 @@ nav-link--logo.active::before {
   opacity: 0.25;
 }
 
-.grid-item:hover img {
-  filter: saturate(1);
+.grid-item__overlay {
+  position: absolute;
+  background: var(--CLR-main-bg);
+  top: calc(0px - 2rem);
+
+  padding: 2rem;
+  border-radius: 1em;
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.07);
+  z-index: 10;
+
+  text-align: center;
+
+  opacity: 0;
+  min-width: 100%;
+  overflow: hidden;
+
+  transition: opacity 500ms;
+
+  box-sizing: content-box;
+}
+
+.grid-item:hover .grid-item__overlay {
   opacity: 1;
+  height: auto;
+}
+
+.grid-item__overlay img {
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity 500ms, filter 500ms;
+}
+
+.grid-item:hover .grid-item__overlay img {
+  filter: saturate(1);
+  opacity: 1 !important;
 }
 
 .container-sticky .flex {
@@ -1135,10 +1180,6 @@ footer {
 .datenschutz .small {
   font-size: 0.75rem;
   opacity: 0.5;
-}
-
-hr {
-  margin: 3em 0;
 }
 
 @media (max-width: 600px) {
