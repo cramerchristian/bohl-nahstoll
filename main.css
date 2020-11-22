@@ -302,7 +302,7 @@ nav-link--logo.active::before {
   width: 100%;
   height: 80vh;
   min-height: 600px;
-  background-image: url(img/assets/header-small-white.jpg);
+  background-image: url(img/assets/header.jpg);
   background-position: bottom left 30%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -364,6 +364,7 @@ nav-link--logo.active::before {
   margin-right: 4em;
   opacity: 0.4;
   width: 110%;
+  max-width: 1100px;
 }
 
 .intro__content,
@@ -405,10 +406,10 @@ nav-link--logo.active::before {
     max-width: 420px;
     min-width: 348px;
   }
-}
 
-.benefits {
-  padding-top: 100px;
+  .benefits {
+    padding-top: 100px;
+  }
 }
 
 .benefits__grid {
@@ -594,7 +595,7 @@ nav-link--logo.active::before {
 
 .process__img {
   margin-top: -16vw;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .process__content {
