@@ -608,13 +608,13 @@ nav-link--logo.active::before {
   }
 
   .scroll {
-    width: 50%;
-    padding-left: 10%;
+    width: 53%;
+    padding-left: 7%;
   }
 
   .scroll--left {
     padding-left: 0;
-    padding-right: 10%;
+    padding-right: 7%;
   }
 
   .service_img {
