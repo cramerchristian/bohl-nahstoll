@@ -9,7 +9,7 @@ const grid_overlays = Array.from(document.getElementsByClassName('grid-item__ove
 
 let isNavOpen = false;
 let isMobile = false;
-const breakpoint = 870;
+const breakpoint = 950;
 
 const setIsMobile = function () {
   isMobile = window.innerWidth < breakpoint ? true : false;
