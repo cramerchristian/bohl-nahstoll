@@ -863,19 +863,21 @@ cite {
 .quote__pagination {
   text-align: center;
   margin-top: 3em;
+  cursor: default;
 }
 
 .quote__pagination > * + * {
-  margin-left: 0.15em;
+  margin-left: 0.3em;
 }
 
 .quote__page {
   display: inline-block;
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
   border-radius: 50px;
   background-color: #fff;
   opacity: 0.2;
+  cursor: pointer;
 }
 
 .quote__page.active {

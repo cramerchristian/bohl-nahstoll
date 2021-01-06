@@ -89,7 +89,7 @@ const quoteData = [
       span: "Projekt Video-Assistant"
     },
     {
-      quote: "Patrick und Christoph haben sich sehr schnell und präzise und unsere Abläufe eingearbeitet und mit ihrem Wissen aus dem Flugbetrieb adaptiert.",
+      quote: "Patrick und Christoph haben sich sehr schnell und präzise ins unsere Abläufe eingearbeitet und mit ihrem Wissen aus dem Flugbetrieb adaptiert.",
       cite: "Robert Schröder",
       span:"Bundesligaschiedsrichter"
     },
@@ -100,6 +100,50 @@ const quoteData = [
     },
     {
       quote: "Wir haben jetzt verstanden, wie wichtig der offene Umgang mit Fehlern innerhalb unseres Teams ist.",
+      cite: "Sabine Schulze",
+      span: "CEO ISBF"
+    }
+  ],
+  [
+    {
+      quote: "Our goal of the collaboration  was to define standard processes, as they are used by pilots in everyday life, and to implement them in communication between referees and their video replay assistants",
+      cite: "German Football Association",
+      span: "Project Video-Assistant"
+    },
+    {
+      quote: "Patrick and Christoph helped us develop a clear and precise, but altogether easy structure for different stressful situations during radio communication between multiple persons.",
+      cite: "Christian Dingert",
+      span:"Bundesliga referee"
+    },
+    {
+      quote: "Clear and precise communication within a team is elementary in complex and stressful situations.",
+      cite: "Robert Schröder",
+      span:"Bundesliga referee"
+    },
+    {
+      quote: "No endless theoretical topics and digressions. The added value was almost immediately recognizable and easy to implement.",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Dentist"
+    }
+  ],
+  [
+    {
+      quote: "The collaboration was very pleasant and extremely professional. In addition to the theoretical aspects, the practical exercises with our referees led to every one of them being able to take on the defined standardized processes.",
+      cite: "German Football Association",
+      span: "Project Video-Assistant"
+    },
+    {
+      quote: "Patrick and Christoph familiarized themselves very quickly and precisely with our procedures and used their knowledge of flight operations to adapt them.",
+      cite: "Robert Schröder",
+      span:"Bundesliga referee"
+    },
+    {
+      quote: "I can’t think of a field that won`t profit from such a coaching",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Dentist"
+    },
+    {
+      quote: "We now understand how important an open approach towards errors within our team is.",
       cite: "Sabine Schulze",
       span: "CEO ISBF"
     }
@@ -114,7 +158,15 @@ quotes.forEach(quoteContainer => {
 function handlePaginationClick(e) {
   const clicked = e.target.dataset.number;
   const pagination = e.target.parentElement
-  const box = pagination.dataset.box
+  let box = parseInt(pagination.dataset.box)
+  const newQuote = quoteData[box][clicked]
+
+  // rename, sodass englische version funktioniert
+  if(box === 2){
+    box = 0
+  } else if(box === 3){
+    box = 1
+  }
 
   pagination.querySelectorAll('.quote__page').forEach(page => page.classList.remove('active'))
   e.target.classList.add('active')
@@ -124,9 +176,8 @@ function handlePaginationClick(e) {
   const cite = quoteStore.children[1].children[0]
   const span = quoteStore.children[1].children[1]
 
-  const newQuote = quoteData[box][clicked]
   quote.innerText = newQuote.quote
   cite.innerText = newQuote.cite
-  quote.innerText = newQuote.quote
+  span.innerText = newQuote.span
 }
 
