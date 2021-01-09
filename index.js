@@ -175,7 +175,10 @@ quoteContainers.forEach(quoteContainer => {
 })
 
 function startTouchF(e){
-  console.log(e.target)
+  if(e.target.classList.contains("quote__pagination") || e.target.classList.contains("quote__page")){
+    return
+  }
+
   startTouch = e.touches[0].clientX
 
   quoteContainers.forEach( item => {
@@ -192,10 +195,14 @@ function moveTouchF(e){
     return
   }
 
-  quote.style.transform = `translateX(${moveTouch - startTouch}px)`
+  quote.style.transform = `translateX(${(moveTouch - startTouch)/2}px)`
 }
 
 function endTouchF(e){
+  if(e.target.classList.contains("quote__pagination") || e.target.classList.contains("quote__page")){
+    return
+  }
+
   quote.style.transform = `translateX(0px)`
 
   if(Math.abs(moveTouch-startTouch) < 50){
@@ -221,14 +228,12 @@ function newQuote(quote, isFwd){
   const active = Array.from(pagination.children).filter(page => page.classList.contains("active"))
   const nextNumber = parseInt(active[0].dataset.number) + (isFwd ? 1 : - 1)
 
-  if(nextNumber >= 0){
+  if(nextNumber >= 0 && nextNumber<= 3){
     nextQuote(pagination, nextNumber, box)
   }
 }
 
 function nextQuote(pagination,nextQuestionNumber, quoteContainerNumber){
-  const box = quoteContainerNumber
-
   const newQuote = quoteData[quoteContainerNumber][nextQuestionNumber]
 
   // rename, sodass englische version funktioniert
@@ -242,7 +247,7 @@ function nextQuote(pagination,nextQuestionNumber, quoteContainerNumber){
 
   pagination.children[nextQuestionNumber].classList.add("active")
 
-  const quoteStore = quotes[box].children[0]
+  const quoteStore = quotes[quoteContainerNumber].children[0]
   const quote = quoteStore.children[0]
   const cite = quoteStore.children[1].children[0]
   const span = quoteStore.children[1].children[1]

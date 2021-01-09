@@ -32,14 +32,8 @@ img {
   scroll-behavior: smooth;
 }
 
-html {
-  overflow: hidden;
-  height: 100%;
-}
-
 body {
-  height: 100%;
-  overflow: auto;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: var(--CLR-main-bg);
