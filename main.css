@@ -40,7 +40,7 @@ body {
   font-size: var(--FONT-copy);
   line-height: 1.4;
   color: var(--CLR-copy);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1,
