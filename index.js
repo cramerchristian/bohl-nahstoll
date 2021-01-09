@@ -70,16 +70,6 @@ const quoteData = [
       quote: "Patrick und Christoph haben uns geholfen, eine klare, bestimmte aber einfache Struktur in unterschiedlichen Stressituationen im Funk mit mehreren Personen zu entwickeln.",
       cite: "Christian Dingert",
       span:"Bundesligaschiedsrichter"
-    },
-    {
-      quote: "Die klare und präzise Kommunikation in einer komplexen und stressigen Teamsituation ist elementar.",
-      cite: "Robert Schröder",
-      span:"Bundesligaschiedsrichter"
-    },
-    {
-      quote: "Keine langen theoretischen Beiträge und Ausschweifungen. Der Mehrwert war sofort zu spüren und ohne großen Aufwand umsetzbar.",
-      cite: "Dr. Nahit Emeklibas",
-      span: "Zahnarzt"
     }
   ],
   [
@@ -92,16 +82,6 @@ const quoteData = [
       quote: "Patrick und Christoph haben sich sehr schnell und präzise ins unsere Abläufe eingearbeitet und mit ihrem Wissen aus dem Flugbetrieb adaptiert.",
       cite: "Robert Schröder",
       span:"Bundesligaschiedsrichter"
-    },
-    {
-      quote: "Ich kann mir keine Branche vorstellen, in der kein Mehrwert durch ein die Arbeit von BN-Training entstehen soll.",
-      cite: "Dr. Nahit Emeklibas",
-      span: "Zahnarzt"
-    },
-    {
-      quote: "Wir haben jetzt verstanden, wie wichtig der offene Umgang mit Fehlern innerhalb unseres Teams ist.",
-      cite: "Sabine Schulze",
-      span: "CEO ISBF"
     }
   ],
   [
@@ -114,16 +94,6 @@ const quoteData = [
       quote: "Patrick and Christoph helped us develop a clear and precise, but altogether easy structure for different stressful situations during radio communication between multiple persons.",
       cite: "Christian Dingert",
       span:"Bundesliga referee"
-    },
-    {
-      quote: "Clear and precise communication within a team is elementary in complex and stressful situations.",
-      cite: "Robert Schröder",
-      span:"Bundesliga referee"
-    },
-    {
-      quote: "No endless theoretical topics and digressions. The added value was almost immediately recognizable and easy to implement.",
-      cite: "Dr. Nahit Emeklibas",
-      span: "Dentist"
     }
   ],
   [
@@ -136,7 +106,95 @@ const quoteData = [
       quote: "Patrick and Christoph familiarized themselves very quickly and precisely with our procedures and used their knowledge of flight operations to adapt them.",
       cite: "Robert Schröder",
       span:"Bundesliga referee"
+    }
+  ]
+]
+
+const rndQuotesDE = {
+  top: [    
+    {
+      quote: "Die klare und präzise Kommunikation in einer komplexen und stressigen Teamsituation ist elementar.",
+      cite: "Robert Schröder",
+      span:"Bundesligaschiedsrichter"
     },
+    {
+      quote: "Keine langen theoretischen Beiträge und Ausschweifungen. Der Mehrwert war sofort zu spüren und ohne großen Aufwand umsetzbar.",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Zahnarzt"
+    },
+    {
+      quote: "Seit der Zusammenarbeit achte ich noch mehr auf die Kommunikation und die dazugehörigen Kommunikationsprozesse.",
+      cite: "Florian Heft",
+      span:"Leiter Private Banking Kreissparkasse Bersenbrück"
+    },
+    {
+      quote: "Die Arbeit mit BN Training hat uns die Probleme verdeutlicht, die speziell bei uns im Betrieb zu bewerkstelligen sind.",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Zahnarzt"
+    },
+    {
+      quote: "Wir arbeiten jetzt zielgerichteter und lassen uns nicht durch Kleinigkeiten vom Kurs abbringen. Ein sehr bereicherndes Erlebnis.",
+      cite: "Sabine Schulze",
+      span: "CEO ISBF"
+    }
+  ],
+  bottom: [
+    {
+      quote: "Ich kann mir keine Branche vorstellen, in der kein Mehrwert durch ein die Arbeit von BN-Training entstehen soll.",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Zahnarzt"
+    },
+    {
+      quote: "Wir haben jetzt verstanden, wie wichtig der offene Umgang mit Fehlern innerhalb unseres Teams ist.",
+      cite: "Sabine Schulze",
+      span: "CEO ISBF"
+    },
+    {
+      quote: "Jeder einzelne im Team konnte davon profitieren, da man sich durch die Anwendung von Standardprozessen und Standardkommunikation noch mehr aufs Wesentliche fokussieren kann.",
+      cite: "Christian Dingert",
+      span: "Bundesligaschiedsrichter"
+    },
+    {
+      quote: "Die Zusammenarbeit lief sehr professionell und strukturiert ab.",
+      cite: "Florian Heft",
+      span: "Leiter Private Banking Kreissparkasse Bersenbrück"
+    },
+    {
+      quote: "Ich verstand, dass menschliche Kommunikation in jeder Branche mit denselben Problemen zu kämpfen hat und sah schnell die Parallelen zu meinem Betrieb.",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Zahnarzt"
+    }
+  ]
+}
+const rndQuotesEN = {
+  top: [
+    {
+      quote: "Clear and precise communication within a team is elementary in complex and stressful situations.",
+      cite: "Robert Schröder",
+      span:"Bundesliga referee"
+    },
+    {
+      quote: "No endless theoretical topics and digressions. The added value was almost immediately recognizable and easy to implement.",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Dentist"
+    },
+    {
+      quote: "Our work is far more goal orientated and we don`t let the little things throw us off course. A very enriching experience",
+      cite: "Sabine Schulze",
+      span: "CEO ISBF"
+    },
+    {
+      quote: "Since our collaboration I have been even more focused on correct communication and its processes.",
+      cite: "Florian Heft",
+      span: "Head of Private Banking Sparkasse Bersenbrück"
+    },
+    {
+      quote: "Our work with BN Training clarified the problems we specifically had to work on within our business.",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Dentist"
+    }
+  ],
+  bottom: [
     {
       quote: "I can’t think of a field that won`t profit from such a coaching",
       cite: "Dr. Nahit Emeklibas",
@@ -146,10 +204,39 @@ const quoteData = [
       quote: "We now understand how important an open approach towards errors within our team is.",
       cite: "Sabine Schulze",
       span: "CEO ISBF"
+    },
+    {
+      quote: "Every single member of the team profited. By applying standard processes and using standardized methods of communication, you are able to focus even more on the important things",
+      cite: "Christian Dingert",
+      span: "Bundesliga Referee"
+    },
+    {
+      quote: "I understood that communication between humans had it´s problems in every field and quickly noticed parallels to my business.",
+      cite: "Dr. Nahit Emeklibas",
+      span: "Dentist"
+    },
+    {
+      quote: "Our work together was very professional und well structured",
+      cite: "Florian Heft",
+      span: "Head of Private Banking Sparkasse Bersenbrück"
     }
   ]
-]
+}
 
+function sortInRndQuotes(rndQuotes, IndexOfArrayToSortIn){
+  for( let i= 0; i < 2; i++){
+    const rndNum = Math.floor(Math.random() * rndQuotes.length)
+    quoteData[IndexOfArrayToSortIn].push(rndQuotes[rndNum])
+    rndQuotes.splice(rndNum,1)
+  }
+}
+
+sortInRndQuotes(rndQuotesDE.top, 0)
+sortInRndQuotes(rndQuotesDE.bottom, 1)
+sortInRndQuotes(rndQuotesEN.top, 2)
+sortInRndQuotes(rndQuotesEN.bottom, 3)
+
+//pagination triggers
 quotes.forEach(quoteContainer => {
   const pagination = quoteContainer.querySelectorAll('.quote__page')
   pagination.forEach(page => page.addEventListener('click', handlePaginationClick))
@@ -159,8 +246,6 @@ function handlePaginationClick(e) {
   const clicked = e.target.dataset.number;
   const pagination = e.target.parentElement
   let box = parseInt(pagination.dataset.box)
-  const newQuote = quoteData[box][clicked]
-
   nextQuote(pagination, clicked, box)
 }
 
@@ -261,7 +346,5 @@ function nextQuote(pagination,nextQuestionNumber, quoteContainerNumber){
     quoteStore.style.opacity = 1;
   },300
   )
-
-
 }
 
