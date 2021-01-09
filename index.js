@@ -340,7 +340,7 @@ function nextQuote(pagination,nextQuestionNumber, quoteContainerNumber){
   quoteStore.style.opacity = 0;
 
   setTimeout(() => {
-    quote.innerText = newQuote.quote
+    quote.innerText = `"${newQuote.quote}"`
     cite.innerText = newQuote.cite
     span.innerText = newQuote.span
     quoteStore.style.opacity = 1;
