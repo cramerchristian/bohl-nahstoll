@@ -887,6 +887,10 @@ cite {
   opacity: 0.7;
 }
 
+.quote__flex {
+  transition: opacity 200ms;
+}
+
 @media (min-width: 50em) {
   .quote__flex {
     display: flex;

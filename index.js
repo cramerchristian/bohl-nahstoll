@@ -252,8 +252,16 @@ function nextQuote(pagination,nextQuestionNumber, quoteContainerNumber){
   const cite = quoteStore.children[1].children[0]
   const span = quoteStore.children[1].children[1]
 
-  quote.innerText = newQuote.quote
-  cite.innerText = newQuote.cite
-  span.innerText = newQuote.span
+  quoteStore.style.opacity = 0;
+
+  setTimeout(() => {
+    quote.innerText = newQuote.quote
+    cite.innerText = newQuote.cite
+    span.innerText = newQuote.span
+    quoteStore.style.opacity = 1;
+  },300
+  )
+
+
 }
 
