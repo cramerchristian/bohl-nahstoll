@@ -32,7 +32,14 @@ img {
   scroll-behavior: smooth;
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  overflow: auto;
   margin: 0;
   padding: 0;
   background-color: var(--CLR-main-bg);
@@ -40,7 +47,6 @@ body {
   font-size: var(--FONT-copy);
   line-height: 1.4;
   color: var(--CLR-copy);
-  overflow-x: hidden;
 }
 
 h1,
