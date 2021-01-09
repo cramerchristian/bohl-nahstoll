@@ -813,6 +813,7 @@ nav-link--logo.active::before {
   padding: 7em 3em;
   margin-top: 80px;
   background: var(--CLR-primary);
+  overflow-x: hidden;
 }
 
 .quote--nomargin {

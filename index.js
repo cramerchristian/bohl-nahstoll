@@ -161,15 +161,86 @@ function handlePaginationClick(e) {
   let box = parseInt(pagination.dataset.box)
   const newQuote = quoteData[box][clicked]
 
+  nextQuote(pagination, clicked, box)
+}
+
+// swipe
+const quoteContainers = Array.from(document.querySelectorAll(".quote"))
+let startTouch, moveTouch, quote
+
+quoteContainers.forEach(quoteContainer => {
+  quoteContainer.addEventListener("touchstart", startTouchF)
+  quoteContainer.addEventListener("touchmove",moveTouchF)
+  quoteContainer.addEventListener("touchend", endTouchF)
+})
+
+function startTouchF(e){
+  console.log(e.target)
+  startTouch = e.touches[0].clientX
+
+  quoteContainers.forEach( item => {
+    if(item.contains(e.target)){
+      quote = item.firstElementChild.firstElementChild
+    }
+  })
+}
+
+function moveTouchF(e){
+  moveTouch = e.touches[0].clientX
+
+  if(startTouch === null){
+    return
+  }
+
+  quote.style.transform = `translateX(${moveTouch - startTouch}px)`
+}
+
+function endTouchF(e){
+  quote.style.transform = `translateX(0px)`
+
+  if(Math.abs(moveTouch-startTouch) < 50){
+    quote=null
+    startTouch=null
+    return
+  }
+  else if((moveTouch + 50) < startTouch){
+    newQuote(quote, true)
+    quote=null
+    startTouch=null
+  } else if ((moveTouch - 50) > startTouch){
+    newQuote(quote, false)
+    quote=null
+    startTouch=null
+  }
+}
+
+function newQuote(quote, isFwd){
+  let pagination = quote.parentElement.children[1]
+  let box = parseInt(pagination.dataset.box)
+
+  const active = Array.from(pagination.children).filter(page => page.classList.contains("active"))
+  const nextNumber = parseInt(active[0].dataset.number) + (isFwd ? 1 : - 1)
+
+  if(nextNumber >= 0){
+    nextQuote(pagination, nextNumber, box)
+  }
+}
+
+function nextQuote(pagination,nextQuestionNumber, quoteContainerNumber){
+  const box = quoteContainerNumber
+
+  const newQuote = quoteData[quoteContainerNumber][nextQuestionNumber]
+
   // rename, sodass englische version funktioniert
-  if(box === 2){
-    box = 0
-  } else if(box === 3){
-    box = 1
+  if(quoteContainerNumber === 2){
+    quoteContainerNumber = 0
+  } else if(quoteContainerNumber === 3){
+    quoteContainerNumber = 1
   }
 
   pagination.querySelectorAll('.quote__page').forEach(page => page.classList.remove('active'))
-  e.target.classList.add('active')
+
+  pagination.children[nextQuestionNumber].classList.add("active")
 
   const quoteStore = quotes[box].children[0]
   const quote = quoteStore.children[0]
