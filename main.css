@@ -19,6 +19,16 @@ img {
 
 /* Code Begins */
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
 :root {
   --CLR-main-bg: #fefefe;
   --CLR-secondary-bg: #ededed;
@@ -33,7 +43,6 @@ img {
 }
 
 body {
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: var(--CLR-main-bg);
@@ -129,6 +138,10 @@ hr {
      N A V I G A T I O N 
 */
 
+.nav-container > * + * {
+  margin-left: 1em;
+}
+
 .nav-container {
   position: fixed;
   top: 0;
@@ -136,7 +149,7 @@ hr {
   right: 0;
   height: 64px;
   z-index: 100;
-  padding: 0 2em;
+  padding: 0 1em;
   background-color: var(--CLR-main-bg);
 
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -161,7 +174,7 @@ hr {
 }
 
 .nav-close {
-  margin-right: 8px;
+  width: 34.3px;
 }
 
 .nav-open,
@@ -495,9 +508,9 @@ nav-link--logo.active::before {
 .grid-item__overlay {
   position: absolute;
   background: var(--CLR-main-bg);
-  top: calc(0px - 2rem);
+  top: calc(0px - 1.5rem);
 
-  padding: 2rem;
+  padding: 1.5rem 1.5rem 2rem;
   border-radius: 1em;
   box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.07);
@@ -506,8 +519,7 @@ nav-link--logo.active::before {
   text-align: center;
 
   opacity: 0;
-  overflow: hidden;
-  min-width: 100%;
+  min-width: 90%;
 
   transition: opacity 500ms;
 
@@ -815,7 +827,6 @@ nav-link--logo.active::before {
   padding: 7em 3em;
   margin-top: 80px;
   background: var(--CLR-primary);
-  overflow-x: hidden;
 }
 
 .quote--nomargin {
@@ -907,6 +918,8 @@ cite {
   }
 }
 
+/* FORM */
+
 .form_container {
   background: var(--CLR-secondary-bg);
   margin-top: 80px;
@@ -943,6 +956,10 @@ cite {
 }
 
 @media (max-width: 950px) {
+  .form_img {
+    padding-left: 0em;
+  }
+
   .form_img img {
     display: none;
   }
@@ -962,9 +979,8 @@ form {
 form input,
 form textarea {
   border: 0;
+  max-width: 360px;
   border-bottom: 1px solid #40474b50;
-  overflow: hidden;
-  width: 300px;
   padding: 0.75em 0.5em 0.25em;
   font-family: inherit;
   font-size: inherit;
@@ -1023,7 +1039,7 @@ form button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  max-width: 360px;
   border: 0;
   background-color: var(--CLR-accent);
   padding: 1.3em 1.3em;
