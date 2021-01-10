@@ -273,8 +273,8 @@ nav-link--logo.active::before {
     z-index: 50;
 
     position: fixed;
-    top: 60px;
-    left: 0;
+    top: 64px;
+    left: -1rem;
     right: 0;
     height: auto;
     background-color: var(--CLR-main-bg);
