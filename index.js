@@ -62,7 +62,7 @@ const quotes = Array.from(document.querySelectorAll(".quote_container"))
 const quoteData = [
   [
     {
-      quote: "Durch die Zusammenarbeit haben wir uns erhofft, Standardprozesse, wie sie unter Piloten im alltäglichen Berufsleben angewendet werden, zu definieren und in der Kommunikation der Video-Assistenten mit den Schiedsrichtern zu implementieren.",
+      quote: "Durch die Zusammenarbeit erarbeiteten wir einen Standardprozess, wie er unter Piloten im alltäglichen Berufsleben angewendet wird und in der Kommunikation der Video-Assistenten mit den Schiedsrichtern implementiert wurde.",
       cite: "Deutscher Fussball Bund",
       span: "Projekt Video-Assistant"
     },
@@ -86,7 +86,7 @@ const quoteData = [
   ],
   [
     {
-      quote: "Our goal of the collaboration  was to define standard processes, as they are used by pilots in everyday life, and to implement them in communication between referees and their video replay assistants",
+      quote: "The goal of the collaboration was to define standard processes, as they are used by pilots in everyday life, and to implement them in communication between referees and their video replay assistants",
       cite: "German Football Association",
       span: "Project Video-Assistant"
     },
