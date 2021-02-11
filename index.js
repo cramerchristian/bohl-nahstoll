@@ -128,13 +128,13 @@ const rndQuotesDE = {
       span:"Leiter Private Banking Kreissparkasse Bersenbrück"
     },
     {
-      quote: "Die Arbeit mit BN Training hat uns die Probleme verdeutlicht, die speziell bei uns im Betrieb zu bewerkstelligen sind.",
+      quote: "Die Arbeit mit BN-Training hat uns die Probleme verdeutlicht, die speziell bei uns im Betrieb zu bewerkstelligen sind.",
       cite: "Dr. Nahit Emeklibas",
       span: "Zahnarzt"
     },
     {
       quote: "Wir arbeiten jetzt zielgerichteter und lassen uns nicht durch Kleinigkeiten vom Kurs abbringen. Ein sehr bereicherndes Erlebnis.",
-      cite: "Sabine Schulze",
+      cite: "Dr. Sabine Schulze",
       span: "CEO ISBF"
     }
   ],
@@ -146,7 +146,7 @@ const rndQuotesDE = {
     },
     {
       quote: "Wir haben jetzt verstanden, wie wichtig der offene Umgang mit Fehlern innerhalb unseres Teams ist.",
-      cite: "Sabine Schulze",
+      cite: "Dr. Sabine Schulze",
       span: "CEO ISBF"
     },
     {
@@ -180,7 +180,7 @@ const rndQuotesEN = {
     },
     {
       quote: "Our work is far more goal orientated and we don`t let the little things throw us off course. A very enriching experience",
-      cite: "Sabine Schulze",
+      cite: "Dr. Sabine Schulze",
       span: "CEO ISBF"
     },
     {
@@ -189,7 +189,7 @@ const rndQuotesEN = {
       span: "Head of Private Banking Sparkasse Bersenbrück"
     },
     {
-      quote: "Our work with BN Training clarified the problems we specifically had to work on within our business.",
+      quote: "Our work with BN-Training clarified the problems we specifically had to work on within our business.",
       cite: "Dr. Nahit Emeklibas",
       span: "Dentist"
     }
@@ -202,7 +202,7 @@ const rndQuotesEN = {
     },
     {
       quote: "We now understand how important an open approach towards errors within our team is.",
-      cite: "Sabine Schulze",
+      cite: "Dr. Sabine Schulze",
       span: "CEO ISBF"
     },
     {
