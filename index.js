@@ -79,7 +79,7 @@ const quoteData = [
       span: "Projekt Video-Assistant"
     },
     {
-      quote: "Patrick und Christoph haben sich sehr schnell und präzise ins unsere Abläufe eingearbeitet und mit ihrem Wissen aus dem Flugbetrieb adaptiert.",
+      quote: "Patrick und Christoph haben sich sehr schnell und präzise in unsere Abläufe eingearbeitet und mit ihrem Wissen aus dem Flugbetrieb adaptiert.",
       cite: "Robert Schröder",
       span:"Bundesligaschiedsrichter"
     }
@@ -140,7 +140,7 @@ const rndQuotesDE = {
   ],
   bottom: [
     {
-      quote: "Ich kann mir keine Branche vorstellen, in der kein Mehrwert durch ein die Arbeit von BN-Training entstehen soll.",
+      quote: "Ich kann mir keine Branche vorstellen, in der kein Mehrwert durch die Arbeit von BN-Training entstehen soll.",
       cite: "Dr. Nahit Emeklibas",
       span: "Zahnarzt"
     },
